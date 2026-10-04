@@ -1,0 +1,32 @@
+# ---- 编译产物 ----
+*.exe
+*.obj
+*.o
+*.out
+*.elf
+*.map
+*.i
+a.out
+
+# ---- Keil (MDK / uVision) ----
+Objects/
+Listings/
+DebugConfig/
+RTE/
+*.uvopt
+*.uvgui.*
+*.hex
+*.m51
+*.lnp
+*.lst
+*.__i
+*.build_log.htm
+
+# ---- VS Code / 编辑器临时文件 ----
+.vs/
+*.bak-*
+*~
+
+# ---- 系统 ----
+Thumbs.db
+desktop.ini

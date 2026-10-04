@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C: 编译当前文件 (gcc)",
+            "command": "D:/VScode/mingw64/bin/gcc.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-finput-charset=UTF-8",
+                "-std=c17",
+                "-Wall",
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/out.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "产物固定为 out.exe：MinGW 的 ld 无法写入含中文的输出路径，这样可兼容中文源文件名"
+        },
+        {
+            "type": "shell",
+            "label": "C: 运行当前文件",
+            "command": "${workspaceFolder}/out.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": "C: 编译当前文件 (gcc)",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        }
+    ]
+}
