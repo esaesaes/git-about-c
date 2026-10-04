@@ -2,7 +2,8 @@
 
 some things about my university
 
-大学期间写的 C / C++ 练习代码合集。
+
+
 
 ## 目录结构
 
